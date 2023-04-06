@@ -39,11 +39,11 @@ The Final Assessment will be graded as follows. Implementation of the core requi
     - [Stretch] A user ID Token should be generated using JsonWebToken. The ID Token should then be persisted on client side with local storage. The client should then check for the existence of the token before prompting the user to authenticate.
     - [Stretch] A user should be able to logout of the application and login with a different account.
 
-### Ticket Management
+### Entry Management
 
 - [Core]
   - A user should be able to create a new entry and edit an existing entry.
-    - [Stretch] There should be a page or modal for users to create new entries. 
+    - [Stretch] There should be a page or model for users to create new entries. 
     - [Stretch] A user should be able to create and edit the following fields on a ticket:
       - userFirstName {String}
       - userLastName {String}
@@ -69,8 +69,7 @@ The Final Assessment will be graded as follows. Implementation of the core requi
   - [Stretch] Only one entry per contractor
     - [Stretch] A contractor should have easy acces to edit their entry.
   - [Stretch] Customers should be able to create a favorites list.
-    - [Stretch] The favorites list should be sortable and filterable.
-    - [Stretch] The favorites list should be paginated.
+  
     
 
 ### Project
@@ -98,9 +97,9 @@ The Final Assessment will be graded as follows. Implementation of the core requi
 - Server-Side
 
 - Client-Side
-- [Recommendation] Many of the input fields for entry creation are shared with entry editing. You may be able to create the same page/modal for entry creation and entry editing.
-- [Optional] Instead of a page, there can be a modal entry creator popup on Create Entry button click.
-- First, create a <FullListPage /> that will fetch all tickets in the database
+- [Recommendation] Many of the input fields for entry creation are shared with entry editing. You may be able to create the same page/model for entry creation and entry editing.
+- [Optional] Instead of a page, there can be a model entry creator popup on Create Entry button click.
+- First, create a <FullListPage /> that will fetch all entries in the database
 
 
 ### User Stories
@@ -118,10 +117,10 @@ The Final Assessment will be graded as follows. Implementation of the core requi
 9. [ ] Provide a way to remove user access asap if needed 
 10. [ ] Contractor entry will assigned to specific user 
 11. [ ] Entry will have a basic contact, licensure, and services provided data
-12. [ ] Notes are either OPEN or COMPLETED 
+12. [ ] Entries are either Active or In-Active 
 13. [ ] Users can be Admin, Contractors, or Customers 
 14. [ ] Entries can only be deleted by assigned Contractors or Admins 
-15. [ ] Anyone can create a review comment (targeted at customer reviews) against any Contractor entry
+15. [ ] Users can create a review comment (targeted at customer reviews) against any Contractor entry
 16. [ ] Contractors can only edit their assigned entries
 17. [ ] Admins can view, edit, and delete all entries and comments 
 18. [ ] Only  Admins can access User Settings 
