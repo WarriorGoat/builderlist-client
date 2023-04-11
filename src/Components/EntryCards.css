@@ -1,0 +1,26 @@
+.card-title {
+    color: black;
+  }
+  
+  .card-deck {
+    display: flex;
+    margin: auto;
+  }
+  
+  .card {
+    display: flex;
+    justify-content: center;
+    max-width: 320px;
+    min-width: 280px;
+    border: 1px solid black;
+    margin: 15px;
+    box-shadow: 5px 10px rgb(186, 217, 248)
+    
+  }
+  
+  li {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    height: auto;
+  }
