@@ -2,11 +2,11 @@ import { useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layouts/Layout";
 import HomePage from "./Pages/HomePage";
-import BlogFormPage from "./Pages/BlogFormPage";
-import BlogListPage from "./Pages/BlogListPage";
+import EntryFormPage from "./Pages/EntryFormPage";
+import EntryListPage from "./Pages/EntryListPage";
 import LoginPage from "./Pages/LoginPage";
 import RegistrationPage from "./Pages/RegistrationPage";
-import "./App.css";
+import "./app.css";
 
 // const urlEndPoint = process.env.REACT_APP_BACKEND;
 
@@ -23,15 +23,15 @@ function App() {
           element: <HomePage />,
         },
         {
-          path: "/blog-form",
-          element: <BlogFormPage 
+          path: "/entry-form",
+          element: <EntryFormPage 
           // urlEndPoint={urlEndPoint} 
           />,
         },
         {
           // index: true,
           path: "/list",
-          element: <BlogListPage 
+          element: <EntryListPage 
           // urlEndPoint={urlEndPoint} 
           />,
         },

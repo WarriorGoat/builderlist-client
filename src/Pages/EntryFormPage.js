@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./BlogForm.css";
+import "./EntryForm.css";
 
-const BlogFormPage = (props) => {
+const EntryFormPage = (props) => {
   const backendUrl = process.env.REACT_APP_BACKEND
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
@@ -13,9 +13,9 @@ const BlogFormPage = (props) => {
   //instantiate navigator
   const navigate = useNavigate();
 
-  const handleCreateBlog = async () => {
+  const handleCreateEntry = async () => {
     axios
-      .post(`${backendUrl}/blogs/create-one`, {
+      .post(`${backendUrl}/entries/create-one`, {
         title: title,
         author: author,
         text: text,
@@ -31,7 +31,7 @@ const BlogFormPage = (props) => {
 
   return (
     <form>
-      <h1>Create a New Blog</h1>
+      <h1>Create a New Entry</h1>
       <label>Title: </label>
       <input
         type="text"
@@ -55,7 +55,7 @@ const BlogFormPage = (props) => {
       <label>Text: </label>
       <textarea
         type="text"
-        placeholder="Blog Entry"
+        placeholder="Entry"
         autoComplete="Off"
         onChange={(e) => {
           setText(e.target.value);
@@ -65,7 +65,7 @@ const BlogFormPage = (props) => {
       <label>Categories: </label>
       <textarea
         type="text"
-        placeholder="Blog Categories"
+        placeholder="Entry Categories"
         autoComplete="Off"
         onChange={(e) => {
           setCategories([e.target.value]);
@@ -74,13 +74,13 @@ const BlogFormPage = (props) => {
       <br />
       <button
         onClick={() => {
-          handleCreateBlog();
+          handleCreateEntry();
         }}
       >
-        Create Blog:{" "}
+        Create Entry:{" "}
       </button>
     </form>
   );
 };
 
-export default BlogFormPage;
+export default EntryFormPage;

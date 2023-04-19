@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import BlogCards from "../Components/BlogCards";
+import EntryCards from "../Components/EntryCards";
 
-const BlogListPage = (props) => {
-  const [blogList, setBlogList] = useState([]);
+const EntryListPage = (props) => {
+  const [entryList, setEntryList] = useState([]);
   const backendUrl = process.env.REACT_APP_BACKEND
   //load the blog items from the back end
 
   const pullData = async () => {
     axios
-      .get(`${backendUrl}/blogs/all`)
+      .get(`${backendUrl}/entries/all`)
       .then((res) => {
-        setBlogList(res.data.blogs);
+        setEntryList(res.data.entries);
       })
       .catch(function (error) {
         console.log(`Client Error Point 2: ` + error);
@@ -24,15 +24,15 @@ const BlogListPage = (props) => {
   // console.log(blogList)
 
   return (
-    <div className="BlogListPage container">
-      <h2 className="display-4 text-center">Here is your List of Blogs</h2>
+    <div className="EntryListPage container">
+      <h2 className="display-4 text-center">Here is your List of Entries</h2>
       <div className="card-group">
-        {blogList.map((blog, index) => (
-          <BlogCards blog={blog} key={index} />
+        {entryList.map((entry, index) => (
+          <EntryCards entry={entry} key={index} />
         ))}
       </div>
     </div>
   );
 };
 
-export default BlogListPage;
+export default EntryListPage;

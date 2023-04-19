@@ -8,12 +8,12 @@ const NavBar = () => {
 
     return (
         <div className = "nav-bar">
-            <h2>Blogger 2.0 </h2>
+            <h2>Builders List </h2>
             <Link to="/"> Home   </Link> 
             <Link to="/login"> Login      </Link>
             <Link to="/registration"> Registration New User   </Link>
-            <Link to="/list"> List Blogs   </Link>
-            <Link to="/blog-form"> Create Blog </Link>
+            <Link to="/list"> Find Builders   </Link>
+            <Link to="/entry-form"> New Builder </Link>
             
             
             <button onClick={()=>{
