@@ -47,7 +47,7 @@ const HomePage = () => {
     return (
         <div>
             <h1>Welcome to Builders List</h1>
-            <h2>Helping you find qualified builders near you!!</h2>
+            <h2>Helping you find qualified builders and subcontractors near you!!</h2>
             <p>Message: {message}</p>
         </div>
     )

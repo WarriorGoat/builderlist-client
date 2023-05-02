@@ -25,6 +25,7 @@ const EntryListPage = (props) => {
 
   return (
     <div className="EntryListPage container">
+      <h2>PLACE HOLDER FOR SEARCH BAR</h2>
       <h2 className="display-4 text-center">Here is your List of Entries</h2>
       <div className="card-group">
         {entryList.map((entry, index) => (

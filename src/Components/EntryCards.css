@@ -1,5 +1,5 @@
 .card-title {
-    color: black;
+    color: rgb(11, 11, 11);
   }
   
   .card-deck {
@@ -9,12 +9,12 @@
   
   .card {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     max-width: 320px;
     min-width: 280px;
     border: 1px solid black;
     margin: 15px;
-    box-shadow: 5px 10px rgb(186, 217, 248)
+    box-shadow: 5px 10px rgb(175, 153, 114)
     
   }
   

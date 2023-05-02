@@ -27,45 +27,94 @@ const EntryCards = (props) => {
 
   const entryCard = (props) => {
     const entry = props.entry;
+    const license = entry.licenseInfo;
+    const address = entry.companyAddress;
+    const workTypes = entry.workTypes;
+    console.log(entry);
     return (
-      <div className="card-body" key={entry.id}>
-        <h2 className="card-title text-center">
-          <b>Title: {entry.title}</b>
-        </h2>
-        <ul className="list-group list-group-flush text-left">
-          <li className="list-group-item">
-            <b>Author:</b> {entry.author}
-          </li>
-          <li className="list-group-item">
-            <b>ID:</b> {entry.id}
-          </li>
-          <li className="list-group-item">
-            <b>Text:</b> {entry.text}
-          </li>
-          <li className="list-group-item">
-            <b>Categories:</b> {entry.categories.join(", ")}
-          </li>
-          <li className="list-group-item">
-            <b>Creation Date:</b> {entry.createdAt}
-          </li>
-          <li className="list-group-item">
-            <b>Last Updated:</b> {entry.updatedAt}
-          </li>
-          <button
-            className="deleteCard"
-            onClick={() => {
-              DeleteCard(entry.id);
-            }}
-          >
-            Delete Entry
-          </button>
-        </ul>
+      <div className="card col" key={entry.id}>
+        <div className="card-header">
+          <h2 className="card-title">Company: {entry.company}
+          </h2>
+        </div>
+        <div className="card-body">
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">
+              <b>Contact Name:</b>{" "}
+              {entry.contactFirstName + " " + entry.contactLastName}
+            </li>
+            <li className="list-group-item">
+              <b>Contact E-Mail:</b> {entry.contactEmail}
+            </li>
+            <li className="list-group-item">
+              <b>Company Address:</b>{" "}
+              {address?.streetNum +
+                " " +
+                address?.streetName +
+                " - " +
+                address?.city +
+                ", " +
+                address?.state +
+                " " +
+                address?.zipCode}
+            </li>
+            <li className="list-group-item">
+              <b>Company Website:</b> {entry.website}
+            </li>
+            <li className="list-group-item">
+              <b>License Info:</b>{" "}
+              {license?.licenseState +
+                " License # " +
+                license?.licenseNum +
+                ", Class: " +
+                license?.licenseCategory}
+            </li>
+            <li className="list-group-item">
+              <b>Work Specialites:</b>{" "}
+              {workTypes?.type0 +
+                ", " +
+                workTypes?.type1 +
+                ", " +
+                workTypes?.type2 +
+                ", " +
+                workTypes?.type3 +
+                ", " +
+                workTypes?.type4 +
+                ", " +
+                workTypes?.type5 +
+                ", " +
+                workTypes?.type6 +
+                ", " +
+                workTypes?.type7 +
+                ", " +
+                workTypes?.type8 +
+                ", " +
+                workTypes?.type9}
+            </li>
+            <li className="list-group-item">
+              <b>Creation Date:</b> {entry.createdAt}
+            </li>
+            <li className="list-group-item">
+              <b>Last Updated:</b> {entry.updatedAt}
+            </li>
+            {/* <button
+              className="deleteCard"
+              onClick={() => {
+                DeleteCard(entry.id);
+              }}
+            >
+              Delete Entry
+            </button> */}
+          </ul>
+          {/* </div> */}
+        </div>
       </div>
     );
   };
   return (
     <>
-      <div className="card">{entryCard(props)}</div>
+      {/* <div className="card">{entryCard(props)}</div> */}
+      <div className="row align-items-start">{entryCard(props)}</div>
     </>
   );
 };
