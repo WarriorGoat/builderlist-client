@@ -70,6 +70,9 @@ const EntryCards = (props) => {
                 license?.licenseCategory}
             </li>
             <li className="list-group-item">
+              <b>Free Estimates:</b> {entry.freeEstimates? "Yes":"No"}
+            </li>
+            <li className="list-group-item">
               <b>Work Specialites:</b>{" "}
               {workTypes?.type0 +
                 ", " +
