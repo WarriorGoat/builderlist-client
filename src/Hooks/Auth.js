@@ -1,5 +1,4 @@
 import { useState, useEffect, createContext, useContext, useMemo } from "react";
-const urlEndpoint = process.env.REACT_APP_BACKEND;
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -7,7 +6,7 @@ export const AuthProvider = ({ children }) => {
   const [userEmail, setUserEmail] = useState("");
   const [isAuthLoading, setIsAuthLoading] = useState(false);
 
-  //didcomponentupdate
+  //did component update
   useEffect(() => {
     const userData = getLSUserData(); //get session data if session is still active from the browser
 
@@ -36,6 +35,7 @@ export const AuthProvider = ({ children }) => {
     if (loginResult.success) {
       //update browser session details
       setLSUserData(loginResult.token, loginResult.email);
+      
     }
     setIsAuthLoading(false);
     return loginResult;
@@ -115,6 +115,7 @@ const setLSUserData = (token, email) => {
     process.env.REACT_APP_TOKEN_HEADER_KEY,
     JSON.stringify({ token, email })
   );
+  return true
 };
 
 const removeLSUserData = () => {
