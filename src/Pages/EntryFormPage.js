@@ -10,7 +10,7 @@ const EntryFormPage = (props) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [website, setWebsite] = useState("")
+  const [webAddress, setWebAddress] = useState("")
   const [streetNum, setStreetNum] = useState("");
   const [streetName, setStreetName] = useState("");
   const [city, setCity] = useState("");
@@ -42,7 +42,7 @@ const EntryFormPage = (props) => {
         contactFirstName: firstName,
         contactLastName: lastName,
         contactEmail: email,
-        webAddress: website,
+        webAddress: webAddress,
         streetNum: streetNum,
         streetName: streetName,
         city: city,
@@ -236,7 +236,7 @@ const EntryFormPage = (props) => {
           placeholder="https://..."
           autoComplete="Off"
           onChange={(e) => {
-            setWebsite(e.target.value);
+            setWebAddress(e.target.value);
           }}
         />
         <br />
