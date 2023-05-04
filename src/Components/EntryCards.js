@@ -9,7 +9,7 @@ const EntryCards = (props) => {
   const [entryList, setEntryList] = useState(props);
 
   const navigate = useNavigate();
-  const MichiganLink = MichiganLink();
+  // const MichiganLink = MichiganLink();
 
   const DeleteCard = (props) => {
     axios
@@ -69,9 +69,8 @@ const EntryCards = (props) => {
                 " License # " +
                 license?.licenseNum +
                 ", Class: " +
-                license?.licenseCategory}
-                <a href=("https://aca-prod.accela.com/LARA/GeneralProperty/LicenseeDetail.aspx?LicenseeNumber="+${license?.licenseNum})> Click here to verify</a>  //This should work, and so should the line below
-                {/* // <a href=`${MichiganLink}+${license?.licenseNum}`> Click here to verify</a> */}
+                license?.licenseClass}
+                 <a href={`${MichiganLink}${license?.licenseNum}`} target = "blank"> Click here to verify</a>
             </li>
             <li className="list-group-item">
               <b>Free Estimates:</b> {entry.freeEstimates? "Yes":"No"}
