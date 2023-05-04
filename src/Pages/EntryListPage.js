@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import EntryCards from "../Components/EntryCards";
+import SearchBar from "../Components/SearchBar"
 
 const EntryListPage = (props) => {
   const [entryList, setEntryList] = useState([]);
@@ -25,7 +26,10 @@ const EntryListPage = (props) => {
 
   return (
     <div className="EntryListPage container">
-      <h2>PLACE HOLDER FOR SEARCH BAR</h2>
+      <div className="searchbar">
+        <h2>Search for Contactors by State and/or Work Specialites</h2>
+        <SearchBar />
+      </div>
       <h2 className="display-4 text-center">Here is your List of Entries</h2>
       <div className="card-group">
         {entryList.map((entry, index) => (
